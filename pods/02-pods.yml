@@ -7,6 +7,10 @@ spec:
     - name: nginx
       image: nginx
     - name: debug
-      image: rkalluru/debug
+      image: centos:7
+      command:
+        - sleep
+        - "100000"
+        ### Note: In Kunernetes numbers should be quotes.
 
 
