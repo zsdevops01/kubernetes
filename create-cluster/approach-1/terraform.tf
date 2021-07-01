@@ -43,3 +43,7 @@ module "vpc" {
     Name            = "k8s-vpc"
   }
 }
+
+output "vpc" {
+  value = module.vpc
+}
