@@ -6,7 +6,7 @@ module "minikube" {
   aws_instance_type   = "t2.medium"
   ssh_public_key      = "~/.ssh/id_rsa.pub"
   aws_subnet_id       = module.vpc.public_subnets[0]
-  ami_image_id        = data.aws_ami.ami.id
+  //ami_image_id        = data.aws_ami.ami.id
   hosted_zone         = var.HOSTED_ZONE
   hosted_zone_private = false
 
@@ -23,12 +23,6 @@ module "minikube" {
 }
 
 variable "HOSTED_ZONE" {}
-
-data "aws_ami" "ami" {
-  most_recent           = true
-  name_regex            = "^Centos-7*"
-  owners                = ["973714476881"]
-}
 
 provider "aws" {
   region                = "us-east-1"
