@@ -9,6 +9,9 @@ spec:
       command:
         - sleep
         - "100000"
-    - name:
+    - name: ping
+      image: rkalluru/zs-ping
+      args:
+        - "yahoo.com"
 
 
