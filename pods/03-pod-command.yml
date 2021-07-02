@@ -13,7 +13,7 @@ spec:
     - name: ping
       image: rkalluru/zs-ping
       ## ARGS is nothing but overwriting CMD
-      args:
-        - "yahoo.com"
+#      args:
+#        - "yahoo.com"
 
 
