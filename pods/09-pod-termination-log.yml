@@ -7,4 +7,5 @@ spec:
   - name: termination-demo-container
     image: debian
     command: ["/bin/sh"]
-    args: ["-c", "sleep 10 && echo Sleep expired > /dev/termination-log"]
+    args: ["-c", "sleep 10 && echo Sleep expired > /tmp/my-log"]
+    terminationMessagePath: "/tmp/my-log"
