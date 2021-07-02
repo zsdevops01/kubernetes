@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample2
+spec:
+  containers:
+    - name: debug
+      image: centos:7
+      command:
+        - sleep
+        - "100000"
+    - name:
+
+
