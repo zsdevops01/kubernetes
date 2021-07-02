@@ -11,6 +11,21 @@ spec:
       - "100000"
       env:
         - name: URL
-          value: google.com
+          #value: google.com
+          valueFrom:
+            configMapKeyRef:
+              key: URL
+              name: sample-meta
 
+
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-meta
+data:
+  URL: yahoo.com
+  ENV: dev
+  PROJECT: sample
 
