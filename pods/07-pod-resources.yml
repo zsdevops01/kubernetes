@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample6
+  name: sample7
 spec:
   containers:
   - image: centos:7
