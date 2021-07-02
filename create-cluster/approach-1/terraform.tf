@@ -45,3 +45,7 @@ module "vpc" {
     Name                = "k8s-vpc"
   }
 }
+
+output "MINIKUBE_SERVER" {
+  value = "ssh centos@${module.minikube.public_ip}"
+}
