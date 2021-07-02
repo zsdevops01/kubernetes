@@ -7,6 +7,7 @@ if [ ! -f "~/.ssh/id_rsa.pub" ]; then
   cat /dev/zero | ssh-keygen -q -N ""
 fi
 
+mkdir -p ~/.kube
 curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/terraform/install.sh | sudo bash
 terraform init
 terraform apply -auto-approve

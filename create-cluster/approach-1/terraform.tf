@@ -49,3 +49,7 @@ module "vpc" {
 output "MINIKUBE_SERVER" {
   value = "ssh centos@${module.minikube.public_ip}"
 }
+
+output "KUBE_CONFIG" {
+  value = "scp centos@${module.minikube.public_ip}:/home/centos/kubeconfig ~/.kube/config"
+}
