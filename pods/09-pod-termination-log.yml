@@ -7,5 +7,15 @@ spec:
   - name: termination-demo-container
     image: debian
     command: ["/bin/sh"]
-    args: ["-c", "sleep 10 && echo Sleep expired > /tmp/my-log"]
+    args: ["-c", "sleep 10 && echo Sleep expired > /dev/termination-log"]
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: msg-path-demo
+spec:
+  containers:
+  - name: msg-path-demo-container
+    image: debian
     terminationMessagePath: "/tmp/my-log"
