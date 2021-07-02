@@ -10,9 +10,8 @@ spec:
       - sleep
       - "100000"
       envFrom:
-        configMapRef:
+      - configMapRef:
           name: sample-meta
-          
       env:
         - name: URL
           #value: google.com
