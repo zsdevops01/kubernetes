@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name: readiness
-      image:
+      image: rkalluru/zs01-readiness
