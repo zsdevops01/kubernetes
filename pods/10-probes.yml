@@ -6,3 +6,10 @@ spec:
   containers:
     - name: readiness
       image: rkalluru/zs01-readiness
+      readinessProbe:
+        exec:
+          command:
+          - cat
+          - /sample.txt
+        initialDelaySeconds: 5
+        periodSeconds: 5
