@@ -10,4 +10,13 @@ spec:
       securityContext:
         #runAsUser: 1000
         runAsNonRoot: true
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged
+spec:
+  containers:
+    - name: readiness
+      image: docker
 
