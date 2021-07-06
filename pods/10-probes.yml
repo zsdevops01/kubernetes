@@ -18,5 +18,5 @@ spec:
           command:
           - cat
           - /sample.txt
-        initialDelaySeconds: 5
+        initialDelaySeconds: 90
         periodSeconds: 5
