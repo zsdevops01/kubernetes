@@ -19,4 +19,7 @@ spec:
   containers:
     - name: docker
       image: docker
+      command:
+      - sleep
+      - "1000000"
 
