@@ -1,4 +1,7 @@
 #rkalluru/zs01-security
 FROM    centos:7
-COPY    run.sh /
-CMD     ["sh", "/run.sh"]
+RUN     useradd demo
+WORKDIR /home/demo
+USER    demo
+COPY    run.sh .
+CMD     ["sh", "run.sh"]
