@@ -13,3 +13,10 @@ spec:
           - /sample.txt
         initialDelaySeconds: 5
         periodSeconds: 5
+      livenessProbe:
+        exec:
+          command:
+          - cat
+          - /sample.txt
+        initialDelaySeconds: 5
+        periodSeconds: 5
