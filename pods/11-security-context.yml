@@ -7,5 +7,6 @@ spec:
     - name: readiness
       image: rkalluru/zs01-security
       securityContext:
-        runAsUser: 1000
+        #runAsUser: 1000
+        runAsNonRoot: true
 
