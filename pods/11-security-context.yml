@@ -6,4 +6,6 @@ spec:
   containers:
     - name: readiness
       image: rkalluru/zs01-security
+      securityContext:
+        runAsUser: 1000
 
