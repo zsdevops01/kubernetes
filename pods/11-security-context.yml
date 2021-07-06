@@ -17,6 +17,6 @@ metadata:
   name: privileged
 spec:
   containers:
-    - name: readiness
+    - name: docker
       image: docker
 
