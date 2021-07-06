@@ -19,6 +19,8 @@ spec:
   containers:
     - name: docker
       image: docker
+      securityContext:
+        privileged: true
       command:
       - sleep
       - "1000000"
