@@ -22,6 +22,7 @@ metadata:
   labels:
     fruit_name: orange
     imported_from: INDIA
+    sample.sample: sample
 spec:
   containers:
     - name: centos
