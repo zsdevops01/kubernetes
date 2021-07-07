@@ -37,6 +37,7 @@ metadata:
   annotations:
     store.invetory/fruit-name: apple
     country/imported: USA
+    stork.libopenstorage.org/skipresource: "false"
 spec:
   containers:
     - name: centos
@@ -44,3 +45,4 @@ spec:
       command:
       - sleep
       - "10000000"
+---
