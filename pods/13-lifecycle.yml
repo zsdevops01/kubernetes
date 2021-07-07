@@ -14,8 +14,8 @@ spec:
         requests:
           memory: "64Gi"
           cpu: "10000m"
-     - name: centos1
-       image: centos:7
-       command:
-       - sleep
-       - "10000000"
+    - name: centos1
+      image: centos:7
+      command:
+      - sleep
+      - "10000000"
