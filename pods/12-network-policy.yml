@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dev-pod
+  namespace: dev
+spec:
+  containers:
+    - name: centos
+      image: centos:7
+      command:
+      - sleep
+      - "10000000"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prod-pod
+  namespace: prod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+#---
+#apiVersion: networking.k8s.io/v1
+#kind: NetworkPolicy
+#metadata:
+#  name: default-deny-all
+#  namespace: prod
+#spec:
+#  podSelector: {}
+#  policyTypes:
+#  - Ingress
+#  - Egress
