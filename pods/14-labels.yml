@@ -13,7 +13,7 @@ spec:
       command:
       - sleep
       - "10000000"
----
+
 ---
 apiVersion: v1
 kind: Pod
@@ -22,6 +22,21 @@ metadata:
   labels:
     fruit_name: orange
     imported_from: INDIA
+spec:
+  containers:
+    - name: centos
+      image: centos:7
+      command:
+      - sleep
+      - "10000000"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: orange-annotations
+  annotations:
+    store/invetory/fruit_name: apple
+    country/imported: USA
 spec:
   containers:
     - name: centos
