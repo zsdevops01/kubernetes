@@ -35,7 +35,7 @@ kind: Pod
 metadata:
   name: orange-annotations
   annotations:
-    store/invetory/fruit-name: apple
+    store.invetory/fruit-name: apple
     country/imported: USA
 spec:
   containers:
