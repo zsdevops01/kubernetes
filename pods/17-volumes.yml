@@ -33,5 +33,5 @@ spec:
   volumes:
     - name: test-volume
       hostPath:
-        path: /opt
+        path: /opt1
         type: Directory
