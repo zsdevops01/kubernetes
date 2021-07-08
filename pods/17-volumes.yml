@@ -6,6 +6,9 @@ spec:
   containers:
     - image: centos:8
       name: test-container
+      command:
+        - sleep
+        - "100000"
       volumeMounts:
         - mountPath: /cache
           name: cache-volume
