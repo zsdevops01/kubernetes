@@ -12,23 +12,23 @@ spec:
   awsElasticBlockStore:
     volumeID: vol-01092b19559b0723c
     fsType: xfs
-#---
-#kind: PersistentVolumeClaim
-#apiVersion: v1
-#metadata:
-#  name: aws-pvc
-#    labels:
-#       type: aws-pvc
-#spec:
-#  accessModes:
-#    - ReadWriteOnce
-#resources:
-#  requests:
-#    storage: 3Gi
-#   selector:
-#    matchLabels:
-#      storagetype: aws-pv
-#---
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: aws-pvc
+    labels:
+       type: aws-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+resources:
+  requests:
+    storage: 3Gi
+   selector:
+    matchLabels:
+      storagetype: aws-pv
+---
 #apiVersion: v1
 #kind: Pod
 #metadata:
