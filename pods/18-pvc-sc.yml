@@ -10,21 +10,21 @@ spec:
     requests:
       storage: 3Gi
 ---
-#apiVersion: v1
-#kind: Pod
-#metadata:
-#  name: pod-pvc-sc
-#spec:
-#  containers:
-#    - image: centos:7
-#      name: test-container
-#      command:
-#        - sleep
-#        - "10000"
-#      volumeMounts:
-#        - mountPath: /test-pd
-#          name: test-volume
-#  volumes:
-#      - name: task-pv-storage
-#        persistentVolumeClaim:
-#          claimName: pvc-sc
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-pvc-sc
+spec:
+  containers:
+    - image: centos:7
+      name: test-container
+      command:
+        - sleep
+        - "10000"
+      volumeMounts:
+        - mountPath: /test-pd
+          name: test-volume
+  volumes:
+      - name: task-pv-storage
+        persistentVolumeClaim:
+          claimName: pvc-sc
