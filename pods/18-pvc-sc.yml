@@ -2,10 +2,10 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: gp3
+  name: st1
 provisioner: kubernetes.io/aws-ebs
 parameters:
-  type: gp3
+  type: st1
 reclaimPolicy: Delete
 allowVolumeExpansion: true
 mountOptions:
@@ -17,7 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-sc
 spec:
-  storageClassName: gp3
+  storageClassName: st1
   accessModes:
     - ReadWriteOnce
   resources:
