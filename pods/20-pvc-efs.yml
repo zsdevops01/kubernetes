@@ -22,6 +22,9 @@ spec:
   volumeName: aws-nfs
   accessModes:
     - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Mi
 ---
 apiVersion: v1
 kind: Pod
@@ -41,4 +44,3 @@ spec:
       - name: test-volume
         persistentVolumeClaim:
           claimName: aws-nfs
-          
