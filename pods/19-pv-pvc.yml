@@ -22,12 +22,12 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-resources:
-  requests:
-    storage: 3Gi
-  selector:
-    matchLabels:
-      storagetype: aws-pv
+  resources:
+    requests:
+      storage: 3Gi
+    selector:
+      matchLabels:
+        storagetype: aws-pv
 ---
 #apiVersion: v1
 #kind: Pod
