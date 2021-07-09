@@ -25,6 +25,6 @@ spec:
         - mountPath: /test-pd
           name: test-volume
   volumes:
-      - name: task-pv-storage
+      - name: test-volume
         persistentVolumeClaim:
           claimName: pvc-sc
