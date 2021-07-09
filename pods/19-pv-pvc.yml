@@ -79,5 +79,5 @@ spec:
   volumes:
       - name: test-volume
         persistentVolumeClaim:
-          claimName: aws-pvc1
+          claimName: aws-pvc
 
