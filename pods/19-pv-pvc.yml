@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: aws-pv
   labels:
-    type: aws-pv
+    storagetype: aws-pv
 spec:
   capacity:
     storage: 100Gi
@@ -11,7 +11,7 @@ spec:
     - ReadWriteOnce
   awsElasticBlockStore:
     volumeID: vol-01092b19559b0723c
-    fsType: xfs
+    storagetype: xfs
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -27,7 +27,7 @@ resources:
     storage: 3Gi
    selector:
     matchLabels:
-      type: aws-pv
+      storagetype: aws-pv
 ---
 apiVersion: v1
 kind: Pod
