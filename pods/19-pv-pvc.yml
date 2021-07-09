@@ -11,7 +11,7 @@ spec:
     - ReadWriteOnce
   awsElasticBlockStore:
     volumeID: vol-01092b19559b0723c
-    storagetype: xfs
+    fsType: xfs
 #---
 #kind: PersistentVolumeClaim
 #apiVersion: v1
