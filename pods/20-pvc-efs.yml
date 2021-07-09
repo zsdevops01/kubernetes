@@ -11,19 +11,17 @@ spec:
     server: 192.168.51.61
     path: "/"
 ---
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: aws-nfs
-  labels:
-    type: aws-nfs
+  name: aws-pvc
 spec:
   storageClassName: ""
-  volumeName: aws-nfs
   accessModes:
     - ReadWriteMany
   resources:
-    storage: 10Mi
+    requests:
+      storage: 10Mi
 ---
 apiVersion: v1
 kind: Pod
