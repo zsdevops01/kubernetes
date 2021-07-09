@@ -20,6 +20,8 @@ metadata:
   labels:
     type: aws-pvc
 spec:
+  storageClassName: ""
+  volumeName: aws-pv
   accessModes:
     - ReadWriteOnce
   resources:
