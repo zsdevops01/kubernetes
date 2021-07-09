@@ -41,3 +41,22 @@ spec:
       - name: test-volume
         persistentVolumeClaim:
           claimName: aws-pvc
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-pvc-pv1
+spec:
+  containers:
+    - image: centos:7
+      name: test-container
+      command:
+        - sleep
+        - "10000"
+      volumeMounts:
+        - mountPath: /test-pd
+          name: test-volume
+  volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: aws-pvc
