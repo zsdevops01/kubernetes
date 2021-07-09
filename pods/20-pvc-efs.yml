@@ -1,23 +1,43 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-efs
+  name: aws-nfs
 spec:
-  accessModes:
-  - ReadWriteMany
   capacity:
-    storage: 1Mi
-  mountOptions:
-  - rsize=1048576
-  - wsize=1048576
-  - hard
-  - timeo=600
-  - retrans=2
-  - noresvport
-  persistentVolumeReclaimPolicy: Retain
+    storage: 10Mi
+  accessModes:
+    - ReadWriteMany
   nfs:
-    path: /
-  claimRef:
-    name: fs-f43b5040
-    namespace: sample
-
+    server: 192.168.51.61
+    path: "/"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: aws-nfs
+  labels:
+    type: aws-nfs
+spec:
+  storageClassName: ""
+  volumeName: aws-nfs
+  accessModes:
+    - ReadWriteMany
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-pvc-pv
+spec:
+  containers:
+    - image: centos:7
+      name: test-container
+      command:
+        - sleep
+        - "10000"
+      volumeMounts:
+        - mountPath: /test-pd
+          name: test-volume
+  volumes:
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: aws-pvc
