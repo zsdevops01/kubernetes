@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+spec:
+  containers:
+    - name: debug
+      image: centos:7
+      command:
+        - sleep
+        - "100000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample
+spec:
+  type: ExternalName
+  externalName: google.com
