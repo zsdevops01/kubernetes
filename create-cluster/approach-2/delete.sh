@@ -1,3 +1,3 @@
 #!/bin/bash
 
-eksctl delete cluster --name sample --region us-east-1
+eksctl delete cluster --name sample1 --region us-east-1
