@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devops
+  labels:
+    app: devops
+spec:
+  containers:
+    - name: nginx
+      image: rkalluru/nginx:devops
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aws
+  labels:
+    app: aws
+spec:
+  containers:
+    - name: nginx
+      image: rkalluru/nginx:aws
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops
+spec:
+  selector:
+    app: devops
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: web
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aws
+spec:
+  selector:
+    app: aws
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: web
