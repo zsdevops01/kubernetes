@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: nginx:1.16
+        image: nginx:1.17
