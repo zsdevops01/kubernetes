@@ -8,6 +8,8 @@ metadata:
 spec:
   # modify replicas according to your case
   replicas: 3
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       tier: frontend
