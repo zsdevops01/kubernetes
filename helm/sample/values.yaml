@@ -36,9 +36,8 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
-  type: ClusterIP
-  port: 80
+
+
 
 ingress:
   enabled: false
@@ -89,4 +88,6 @@ deployment:
   name: nginx-deployment
 
 service:
-  name: nginx
+  type: ClusterIP
+  port: 80
+  name: nginx 
