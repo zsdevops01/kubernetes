@@ -90,4 +90,4 @@ deployment:
 service:
   type: ClusterIP
   port: 80
-  name: nginx 
+  name: nginx
